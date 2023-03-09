@@ -1,5 +1,5 @@
 /** Request to the api to get data. */
-fetch("https://kanap-api-hm0h.onrender.com/api/products")
+fetch("https://kanap-api-hm0h.onrender.com/api/products") // Changed the API link
     .then((res) => res.json())
     .then((data) => addProducts(data))
     .catch((err) => console.error(err));
