@@ -9,7 +9,7 @@ function retrieveCart() {
        const itemObject = JSON.parse(item);
  
        /** Request to API to retrive infos of product*/
-       fetch(`http://localhost:3000/api/products/${ itemObject.id }`)
+       fetch(`https://kanap-api-hm0h.onrender.com/api/products/${ itemObject.id }`)
            .then((response) => response.json())
            .then((res) => {
               const cartItem = { ...itemObject, ...res };
@@ -220,7 +220,7 @@ function submitForm(e) {
 
 const requestData = makeRequestData()
 
-fetch("http://localhost:3000/api/products/order", {
+fetch("https://kanap-api-hm0h.onrender.com/api/products/order", {
     method : "POST", /** to send data to storage. */
     body : JSON.stringify(requestData), /** prepare data in string. */
     headers : {

@@ -8,7 +8,7 @@ if (id != null) {
 }
 
 /** Request to the api the product data from the ID. */
-fetch(`http://localhost:3000/api/products/${id}`)
+fetch(`https://kanap-api-hm0h.onrender.com/api/products/${id}`)
 .then((response) => response.json())
 .then((res) => handleData(res))
 .catch((err) => console.error(err));
